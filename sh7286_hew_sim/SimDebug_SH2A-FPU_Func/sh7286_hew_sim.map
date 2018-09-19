@@ -1,0 +1,1168 @@
+Optimizing Linkage Editor (V.10.02.01.000)        12-Sep-2018 13:55:38
+
+*** Options ***
+
+-subcommand=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\sh7286_hew_sim.hlk
+-noprelink
+-rom=D=R
+-nomessage
+-list="C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\sh7286_hew_sim.map"
+-show=symbol,total_size
+-nooptimize
+-start=DVECTTBL,DINTTBL/00,PResetPRG,PIntPRG/0800,P,C,C$BSEC,C$DSEC,D/01000,B,R/0FFF80000,BHeap/0FFF87800,S/0FFF87C00
+-nologo
+-input="C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\dbsct.obj"
+-input="C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\intprg.obj"
+-input="C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\lowlvl.obj"
+-input="C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\lowsrc.obj"
+-input="C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\resetprg.obj"
+-input="C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\sbrk.obj"
+-input="C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\sh7286_hew_sim.obj"
+-input="C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\vecttbl.obj"
+-library="C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\sh7286_hew_sim.lib"
+-output="C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\sh7286_hew_sim.abs"
+-end
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+DVECTTBL
+                                  00000000  0000000f        10   4
+DINTTBL
+                                  00000010  000007ff       7f0   4
+PResetPRG
+                                  00000800  00000873        74   4
+PIntPRG
+                                  00000874  00000adf       26c   4
+P
+                                  00001000  00005027      4028   4
+C
+                                  00005028  0000537b       354   4
+C$BSEC
+                                  0000537c  00005383         8   4
+C$DSEC
+                                  00005384  0000538f         c   4
+D
+                                  00005390  00005397         8   4
+B
+                                  fff80000  fff801c3       1c4   4
+R
+                                  fff801c4  fff801cb         8   4
+BHeap
+                                  fff87800  fff87bff       400   4
+S
+                                  fff87c00  fff87fff       400   4
+
+*** Total Section Size ***
+
+RAMDATA SECTION:  000009cc Byte(s)
+ROMDATA SECTION:  00000b70 Byte(s)
+PROGRAM SECTION:  00004308 Byte(s)
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=DVECTTBL
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\vecttbl.obj
+                                  00000000  0000000f        10
+  _RESET_Vectors
+                                  00000000        10   data ,g         * 
+
+SECTION=DINTTBL
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\vecttbl.obj
+                                  00000010  000007ff       7f0
+  _INT_Vectors
+                                  00000010       7f0   data ,g         * 
+
+SECTION=PResetPRG
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\resetprg.obj
+                                  00000800  00000873        74
+  _PowerON_Reset_PC
+                                  00000800        46   entry,g         * 
+  _Manual_Reset_PC
+                                  00000846        2e   func ,g         * 
+
+SECTION=PIntPRG
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\intprg.obj
+                                  00000874  00000adf       26c
+  _INT_Illegal_code
+                                  00000874         4   func ,g         * 
+  _INT_Illegal_slot
+                                  00000878         4   func ,g         * 
+  _INT_CPU_Address
+                                  0000087c         4   func ,g         * 
+  _INT_DMAC_Address
+                                  00000880         4   func ,g         * 
+  _INT_NMI
+                                  00000884         4   func ,g         * 
+  _INT_User_Break
+                                  00000888         4   func ,g         * 
+  _INT_HUDI
+                                  0000088c         4   func ,g         * 
+  _INT_Bank_Overflow
+                                  00000890         4   func ,g         * 
+  _INT_Bank_Underflow
+                                  00000894         4   func ,g         * 
+  _INT_Divide_by_Zero
+                                  00000898         4   func ,g         * 
+  _INT_Divide_Overflow
+                                  0000089c         4   func ,g         * 
+  _INT_TRAPA32
+                                  000008a0         4   func ,g         * 
+  _INT_TRAPA33
+                                  000008a4         4   func ,g         * 
+  _INT_TRAPA34
+                                  000008a8         4   func ,g         * 
+  _INT_TRAPA35
+                                  000008ac         4   func ,g         * 
+  _INT_TRAPA36
+                                  000008b0         4   func ,g         * 
+  _INT_TRAPA37
+                                  000008b4         4   func ,g         * 
+  _INT_TRAPA38
+                                  000008b8         4   func ,g         * 
+  _INT_TRAPA39
+                                  000008bc         4   func ,g         * 
+  _INT_TRAPA40
+                                  000008c0         4   func ,g         * 
+  _INT_TRAPA41
+                                  000008c4         4   func ,g         * 
+  _INT_TRAPA42
+                                  000008c8         4   func ,g         * 
+  _INT_TRAPA43
+                                  000008cc         4   func ,g         * 
+  _INT_TRAPA44
+                                  000008d0         4   func ,g         * 
+  _INT_TRAPA45
+                                  000008d4         4   func ,g         * 
+  _INT_TRAPA46
+                                  000008d8         4   func ,g         * 
+  _INT_TRAPA47
+                                  000008dc         4   func ,g         * 
+  _INT_TRAPA48
+                                  000008e0         4   func ,g         * 
+  _INT_TRAPA49
+                                  000008e4         4   func ,g         * 
+  _INT_TRAPA50
+                                  000008e8         4   func ,g         * 
+  _INT_TRAPA51
+                                  000008ec         4   func ,g         * 
+  _INT_TRAPA52
+                                  000008f0         4   func ,g         * 
+  _INT_TRAPA53
+                                  000008f4         4   func ,g         * 
+  _INT_TRAPA54
+                                  000008f8         4   func ,g         * 
+  _INT_TRAPA55
+                                  000008fc         4   func ,g         * 
+  _INT_TRAPA56
+                                  00000900         4   func ,g         * 
+  _INT_TRAPA57
+                                  00000904         4   func ,g         * 
+  _INT_TRAPA58
+                                  00000908         4   func ,g         * 
+  _INT_TRAPA59
+                                  0000090c         4   func ,g         * 
+  _INT_TRAPA60
+                                  00000910         4   func ,g         * 
+  _INT_TRAPA61
+                                  00000914         4   func ,g         * 
+  _INT_TRAPA62
+                                  00000918         4   func ,g         * 
+  _INT_TRAPA63
+                                  0000091c         4   func ,g         * 
+  _INT_IRQ0
+                                  00000920         4   func ,g         * 
+  _INT_IRQ1
+                                  00000924         4   func ,g         * 
+  _INT_IRQ2
+                                  00000928         4   func ,g         * 
+  _INT_IRQ3
+                                  0000092c         4   func ,g         * 
+  _INT_IRQ4
+                                  00000930         4   func ,g         * 
+  _INT_IRQ5
+                                  00000934         4   func ,g         * 
+  _INT_IRQ6
+                                  00000938         4   func ,g         * 
+  _INT_IRQ7
+                                  0000093c         4   func ,g         * 
+  _INT_ADC_ADI0
+                                  00000940         4   func ,g         * 
+  _INT_ADC_ADI1
+                                  00000944         4   func ,g         * 
+  _INT_ADC_ADI2
+                                  00000948         4   func ,g         * 
+  _INT_RCAN_ERS0
+                                  0000094c         4   func ,g         * 
+  _INT_RCAN_OVR0
+                                  00000950         4   func ,g         * 
+  _INT_RCAN_RM0
+                                  00000954         4   func ,g         * 
+  _INT_RCAN_SLE0
+                                  00000958         4   func ,g         * 
+  _INT_DMAC0_DEI0
+                                  0000095c         4   func ,g         * 
+  _INT_DMAC0_HEI0
+                                  00000960         4   func ,g         * 
+  _INT_DMAC1_DEI1
+                                  00000964         4   func ,g         * 
+  _INT_DMAC1_HEI1
+                                  00000968         4   func ,g         * 
+  _INT_DMAC2_DEI2
+                                  0000096c         4   func ,g         * 
+  _INT_DMAC2_HEI2
+                                  00000970         4   func ,g         * 
+  _INT_DMAC3_DEI3
+                                  00000974         4   func ,g         * 
+  _INT_DMAC3_HEI3
+                                  00000978         4   func ,g         * 
+  _INT_DMAC4_DEI4
+                                  0000097c         4   func ,g         * 
+  _INT_DMAC4_HEI4
+                                  00000980         4   func ,g         * 
+  _INT_DMAC5_DEI5
+                                  00000984         4   func ,g         * 
+  _INT_DMAC5_HEI5
+                                  00000988         4   func ,g         * 
+  _INT_DMAC6_DEI6
+                                  0000098c         4   func ,g         * 
+  _INT_DMAC6_HEI6
+                                  00000990         4   func ,g         * 
+  _INT_DMAC7_DEI7
+                                  00000994         4   func ,g         * 
+  _INT_DMAC7_HEI7
+                                  00000998         4   func ,g         * 
+  _INT_CMT_CMI0
+                                  0000099c         4   func ,g         * 
+  _INT_CMT_CMI1
+                                  000009a0         4   func ,g         * 
+  _INT_BSC_CMI
+                                  000009a4         4   func ,g         * 
+  _INT_WDT_ITI
+                                  000009a8         4   func ,g         * 
+  _INT_USB_EP1_FULL_END
+                                  000009ac         4   func ,g         * 
+  _INT_USB_EP2_EMPTY_END
+                                  000009b0         4   func ,g         * 
+  _INT_MTU2_MTU0_TGIA0
+                                  000009b4         4   func ,g         * 
+  _INT_MTU2_MTU0_TGIB0
+                                  000009b8         4   func ,g         * 
+  _INT_MTU2_MTU0_TGIC0
+                                  000009bc         4   func ,g         * 
+  _INT_MTU2_MTU0_TGID0
+                                  000009c0         4   func ,g         * 
+  _INT_MTU2_MTU0_TCIV0
+                                  000009c4         4   func ,g         * 
+  _INT_MTU2_MTU0_TGIE0
+                                  000009c8         4   func ,g         * 
+  _INT_MTU2_MTU0_TGIF0
+                                  000009cc         4   func ,g         * 
+  _INT_MTU2_MTU1_TGIA1
+                                  000009d0         4   func ,g         * 
+  _INT_MTU2_MTU1_TGIB1
+                                  000009d4         4   func ,g         * 
+  _INT_MTU2_MTU1_TCIV1
+                                  000009d8         4   func ,g         * 
+  _INT_MTU2_MTU1_TCIU1
+                                  000009dc         4   func ,g         * 
+  _INT_MTU2_MTU2_TGIA2
+                                  000009e0         4   func ,g         * 
+  _INT_MTU2_MTU2_TGIB2
+                                  000009e4         4   func ,g         * 
+  _INT_MTU2_MTU2_TCIV2
+                                  000009e8         4   func ,g         * 
+  _INT_MTU2_MTU2_TCIU2
+                                  000009ec         4   func ,g         * 
+  _INT_MTU2_MTU3_TGIA3
+                                  000009f0         4   func ,g         * 
+  _INT_MTU2_MTU3_TGIB3
+                                  000009f4         4   func ,g         * 
+  _INT_MTU2_MTU3_TGIC3
+                                  000009f8         4   func ,g         * 
+  _INT_MTU2_MTU3_TGID3
+                                  000009fc         4   func ,g         * 
+  _INT_MTU2_MTU3_TCIV3
+                                  00000a00         4   func ,g         * 
+  _INT_MTU2_MTU4_TGIA4
+                                  00000a04         4   func ,g         * 
+  _INT_MTU2_MTU4_TGIB4
+                                  00000a08         4   func ,g         * 
+  _INT_MTU2_MTU4_TGIC4
+                                  00000a0c         4   func ,g         * 
+  _INT_MTU2_MTU4_TGID4
+                                  00000a10         4   func ,g         * 
+  _INT_MTU2_MTU4_TCIV4
+                                  00000a14         4   func ,g         * 
+  _INT_MTU2_MTU5_TGIU5
+                                  00000a18         4   func ,g         * 
+  _INT_MTU2_MTU5_TGIV5
+                                  00000a1c         4   func ,g         * 
+  _INT_MTU2_MTU5_TGIW5
+                                  00000a20         4   func ,g         * 
+  _INT_POE2_OEI1
+                                  00000a24         4   func ,g         * 
+  _INT_POE2_OEI2
+                                  00000a28         4   func ,g         * 
+  _INT_MTU2S_MTU3S_TGIA3
+                                  00000a2c         4   func ,g         * 
+  _INT_MTU2S_MTU3S_TGIB3
+                                  00000a30         4   func ,g         * 
+  _INT_MTU2S_MTU3S_TGIC3
+                                  00000a34         4   func ,g         * 
+  _INT_MTU2S_MTU3S_TGID3
+                                  00000a38         4   func ,g         * 
+  _INT_MTU2S_MTU3S_TCIV3
+                                  00000a3c         4   func ,g         * 
+  _INT_MTU2S_MTU4S_TGIA4
+                                  00000a40         4   func ,g         * 
+  _INT_MTU2S_MTU4S_TGIB4
+                                  00000a44         4   func ,g         * 
+  _INT_MTU2S_MTU4S_TGIC4
+                                  00000a48         4   func ,g         * 
+  _INT_MTU2S_MTU4S_TGID4
+                                  00000a4c         4   func ,g         * 
+  _INT_MTU2S_MTU4S_TCIV4
+                                  00000a50         4   func ,g         * 
+  _INT_MTU2S_MTU5S_TGIU5
+                                  00000a54         4   func ,g         * 
+  _INT_MTU2S_MTU5S_TGIV5
+                                  00000a58         4   func ,g         * 
+  _INT_MTU2S_MTU5S_TGIW5
+                                  00000a5c         4   func ,g         * 
+  _INT_POE2_OEI3
+                                  00000a60         4   func ,g         * 
+  _INT_USB_USI0
+                                  00000a64         4   func ,g         * 
+  _INT_USB_USI1
+                                  00000a68         4   func ,g         * 
+  _INT_IIC3_STPI
+                                  00000a6c         4   func ,g         * 
+  _INT_IIC3_NAKI
+                                  00000a70         4   func ,g         * 
+  _INT_IIC3_RXI
+                                  00000a74         4   func ,g         * 
+  _INT_IIC3_TXI
+                                  00000a78         4   func ,g         * 
+  _INT_IIC3_TEI
+                                  00000a7c         4   func ,g         * 
+  _INT_SSU_SSERI
+                                  00000a80         4   func ,g         * 
+  _INT_SSU_SSRXI
+                                  00000a84         4   func ,g         * 
+  _INT_SSU_SSTXI
+                                  00000a88         4   func ,g         * 
+  _INT_SCI_SCI4_ERI4
+                                  00000a8c         4   func ,g         * 
+  _INT_SCI_SCI4_RXI4
+                                  00000a90         4   func ,g         * 
+  _INT_SCI_SCI4_TXI4
+                                  00000a94         4   func ,g         * 
+  _INT_SCI_SCI4_TEI4
+                                  00000a98         4   func ,g         * 
+  _INT_SCI_SCI0_ERI0
+                                  00000a9c         4   func ,g         * 
+  _INT_SCI_SCI0_RXI0
+                                  00000aa0         4   func ,g         * 
+  _INT_SCI_SCI0_TXI0
+                                  00000aa4         4   func ,g         * 
+  _INT_SCI_SCI0_TEI0
+                                  00000aa8         4   func ,g         * 
+  _INT_SCI_SCI1_ERI1
+                                  00000aac         4   func ,g         * 
+  _INT_SCI_SCI1_RXI1
+                                  00000ab0         4   func ,g         * 
+  _INT_SCI_SCI1_TXI1
+                                  00000ab4         4   func ,g         * 
+  _INT_SCI_SCI1_TEI1
+                                  00000ab8         4   func ,g         * 
+  _INT_SCI_SCI2_ERI2
+                                  00000abc         4   func ,g         * 
+  _INT_SCI_SCI2_RXI2
+                                  00000ac0         4   func ,g         * 
+  _INT_SCI_SCI2_TXI2
+                                  00000ac4         4   func ,g         * 
+  _INT_SCI_SCI2_TEI2
+                                  00000ac8         4   func ,g         * 
+  _INT_SCIF_SCIF3_BRI3
+                                  00000acc         4   func ,g         * 
+  _INT_SCIF_SCIF3_ERI3
+                                  00000ad0         4   func ,g         * 
+  _INT_SCIF_SCIF3_RXI3
+                                  00000ad4         4   func ,g         * 
+  _INT_SCIF_SCIF3_TXI3
+                                  00000ad8         4   func ,g         * 
+  _Dummy
+                                  00000adc         4   func ,g         * 
+
+SECTION=P
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\lowlvl.obj
+                                  00001000  0000103f        40
+  _charput
+                                  00001000         0   none ,g         * 
+  O_PAR
+                                  0000101c         0   none ,l         * 
+  _charget
+                                  00001020         0   none ,g         * 
+  I_PAR
+                                  0000103c         0   none ,l         * 
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\lowsrc.obj
+                                  00001040  000011f7       1b8
+  _open
+                                  00001040        52   func ,g         * 
+  _close
+                                  00001092        1a   func ,g         * 
+  _read
+                                  000010ac        3c   func ,g         * 
+  _write
+                                  000010e8        30   func ,g         * 
+  _lseek
+                                  00001118         4   func ,g         * 
+  __INIT_IOLIB
+                                  0000111c        7e   func ,g         * 
+  __CLOSEALL
+                                  0000119a        5e   func ,g         * 
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\sbrk.obj
+                                  000011f8  00001213        1c
+  _sbrk
+                                  000011f8        1c   func ,g         * 
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\sh7286_hew_sim.obj
+                                  00001214  0000123f        2c
+  _main
+                                  00001214        2c   func ,g         * 
+FILE=__initsct
+                                  00001240  00001323        e4
+  __INITSCT
+                                  00001240         0   none ,g         * 
+  $CNCL_15
+                                  00001256         0   none ,l         * 
+  $CNCL_10
+                                  0000127a         0   none ,l         * 
+  $CNCL_19
+                                  0000127e         0   none ,l         * 
+  $CNCL_16
+                                  00001286         0   none ,l         * 
+  $CNCL_5
+                                  0000128a         0   none ,l         * 
+  $CNCL_14
+                                  00001292         0   none ,l         * 
+  $CNCL_3
+                                  00001296         0   none ,l         * 
+  $CNCL_4
+                                  0000129a         0   none ,l         * 
+  $CNCL_17
+                                  000012a6         0   none ,l         * 
+  $CNCL_2
+                                  000012d2         0   none ,l         * 
+  $CNCL_13
+                                  000012d8         0   none ,l         * 
+  $CNCL_11
+                                  000012e0         0   none ,l         * 
+  $CNCL_18
+                                  000012e6         0   none ,l         * 
+  $CNCL_7
+                                  000012ec         0   none ,l         * 
+  $CNCL_1
+                                  000012f4         0   none ,l         * 
+  $CNCL_12
+                                  000012fa         0   none ,l         * 
+  $CNCL_6
+                                  000012fe         0   none ,l         * 
+  $CNCL_8
+                                  00001314         0   none ,l         * 
+  $CNCL_20
+                                  00001318         0   none ,l         * 
+  $CNCL_9
+                                  0000131c         0   none ,l         * 
+  $CNCL_21
+                                  00001320         0   none ,l         * 
+FILE=__strcmp
+                                  00001324  000013fb        d8
+  __slow_strcmp1
+                                  00001324         0   none ,g         * 
+  __quick_strcmp1
+                                  0000135e         0   none ,g         * 
+  $CNCL_2
+                                  00001360         0   none ,l         * 
+  $CNCL_4
+                                  000013a8         0   none ,l         * 
+  $CNCL_1
+                                  000013ac         0   none ,l         * 
+  $CNCL_3
+                                  000013b0         0   none ,l         * 
+  $CNCL_5
+                                  000013f8         0   none ,l         * 
+FILE=fclose
+                                  000013fc  00001437        3c
+  _fclose
+                                  000013fc        3c   func ,g         * 
+FILE=freopen
+                                  00001438  0000148f        58
+  _freopen
+                                  00001438        58   func ,g         * 
+FILE=printf
+                                  00001490  000014cb        3c
+  _printf
+                                  00001490        3c   func ,g         * 
+FILE=_flclose
+                                  000014cc  00001563        98
+  __flclose
+                                  000014cc        98   func ,g         * 
+FILE=_flopen
+                                  00001564  0000168b       128
+  __flopen
+                                  00001564       128   func ,g         * 
+FILE=_fmtout
+                                  0000168c  00002d1b      1690
+  __fmtout
+                                  0000168c       a5e   func ,g         * 
+  __lltostr
+                                  000020ea       286   func ,l         * 
+  __ltostr
+                                  00002370       1c2   func ,l         * 
+  __xtostr
+                                  00002532       71e   func ,l         * 
+  __round
+                                  00002c50        5c   func ,l         * 
+  __putstr
+                                  00002cac        46   func ,l         * 
+  __putnull
+                                  00002cf2         e   func ,l         * 
+  __puterr
+                                  00002d00        1c   func ,l         * 
+FILE=fputc
+                                  00002d1c  00002dc3        a8
+  _fputc
+                                  00002d1c        a8   func ,g         * 
+FILE=r_ned_a
+                                  00002dc4  00002e57        94
+  __ned_a
+                                  00002dc4         0   none ,g         * 
+  $CNCL_10
+                                  00002df6         0   none ,l         * 
+  $CNCL_2
+                                  00002dfa         0   none ,l         * 
+  $CNCL_5
+                                  00002dfe         0   none ,l         * 
+  $CNCL_3
+                                  00002e0a         0   none ,l         * 
+  $CNCL_7
+                                  00002e0c         0   none ,l         * 
+  $CNCL_1
+                                  00002e1e         0   none ,l         * 
+  $CNCL_4
+                                  00002e2a         0   none ,l         * 
+  $CNCL_6
+                                  00002e36         0   none ,l         * 
+  $CNCL_8
+                                  00002e50         0   none ,l         * 
+  $CNCL_9
+                                  00002e54         0   none ,l         * 
+FILE=__cmpgt64u
+                                  00002e58  00002e6d        16
+  __cmpgt64u
+                                  00002e58         0   none ,g         * 
+  $CNCL_1
+                                  00002e66         0   none ,l         * 
+FILE=__div64u
+                                  00002e70  000030fd       28e
+  __div64u
+                                  00002e70         0   none ,g         * 
+  $CNCL_18
+                                  00002e8c         0   none ,l         * 
+  $CNCL_13
+                                  00002eb4         0   none ,l         * 
+  $CNCL_14
+                                  00002ed4         0   none ,l         * 
+  $CNCL_15
+                                  00002ed8         0   none ,l         * 
+  $CNCL_7
+                                  00002ef0         0   none ,l         * 
+  $CNCL_12
+                                  00002f10         0   none ,l         * 
+  $CNCL_16
+                                  00002f2c         0   none ,l         * 
+  $CNCL_3
+                                  00002f3c         0   none ,l         * 
+  $CNCL_10
+                                  00002f48         0   none ,l         * 
+  $CNCL_4
+                                  00002f4c         0   none ,l         * 
+  $CNCL_6
+                                  00002f56         0   none ,l         * 
+  $CNCL_1
+                                  00002f5a         0   none ,l         * 
+  $CNCL_9
+                                  00002f7a         0   none ,l         * 
+  $CNCL_17
+                                  00002f8e         0   none ,l         * 
+  $CNCL_8
+                                  00002fda         0   none ,l         * 
+  $CNCL_5
+                                  00002fe6         0   none ,l         * 
+  $CNCL_2
+                                  0000306c         0   none ,l         * 
+  $CNCL_11
+                                  000030f0         0   none ,l         * 
+FILE=__mod64u
+                                  00003100  00003387       288
+  __mod64u
+                                  00003100         0   none ,g         * 
+  $CNCL_18
+                                  0000311c         0   none ,l         * 
+  $CNCL_14
+                                  00003146         0   none ,l         * 
+  $CNCL_13
+                                  0000314a         0   none ,l         * 
+  $CNCL_15
+                                  0000316a         0   none ,l         * 
+  $CNCL_7
+                                  00003182         0   none ,l         * 
+  $CNCL_12
+                                  000031a2         0   none ,l         * 
+  $CNCL_16
+                                  000031be         0   none ,l         * 
+  $CNCL_3
+                                  000031c8         0   none ,l         * 
+  $CNCL_10
+                                  000031d4         0   none ,l         * 
+  $CNCL_4
+                                  000031d8         0   none ,l         * 
+  $CNCL_6
+                                  000031e0         0   none ,l         * 
+  $CNCL_1
+                                  000031e4         0   none ,l         * 
+  $CNCL_9
+                                  00003204         0   none ,l         * 
+  $CNCL_17
+                                  00003218         0   none ,l         * 
+  $CNCL_8
+                                  00003264         0   none ,l         * 
+  $CNCL_5
+                                  00003270         0   none ,l         * 
+  $CNCL_2
+                                  000032f6         0   none ,l         * 
+  $CNCL_11
+                                  0000337a         0   none ,l         * 
+FILE=_flshbuf
+                                  00003388  00003453        cc
+  __flshbuf
+                                  00003388        cc   func ,g         * 
+FILE=_its
+                                  00003454  0000354b        f8
+  __its
+                                  00003454        f8   func ,g         * 
+FILE=_xti
+                                  0000354c  00003793       248
+  __xti
+                                  0000354c       248   func ,g         * 
+FILE=free
+                                  00003794  00003817        84
+  __free
+                                  00003794        84   func ,g         * 
+  _free
+                                  00003794         0   func ,g         * 
+FILE=memcpy
+                                  00003818  00003b45       32e
+  _memcpy
+                                  00003818        28   func ,g         * 
+  _memcpy1
+                                  00003840        8a   func ,l         * 
+  _moveLong1
+                                  000038ca       1e2   func ,l         * 
+  _quick_move1
+                                  00003aac        5e   func ,l         * 
+  _moveLong
+                                  00003b0a        2c   func ,l         * 
+  _moveChar1
+                                  00003b36        10   func ,l         * 
+FILE=strlen
+                                  00003b48  00003b55         e
+  _strlen
+                                  00003b48         e   func ,g         * 
+FILE=_allzero
+                                  00003b58  00003b6d        16
+  __allzero
+                                  00003b58        16   func ,g         * 
+FILE=_alocbuf
+                                  00003b70  00003bdb        6c
+  __alocbuf
+                                  00003b70        6c   func ,g         * 
+FILE=_calcnpw
+                                  00003bdc  00003cbb        e0
+  __calcnpw
+                                  00003bdc        e0   func ,g         * 
+FILE=_log10
+                                  00003cbc  00003f17       25c
+  __log10
+                                  00003cbc        60   func ,g         * 
+  _frexp
+                                  00003d1c        d6   func ,l         * 
+  _modf
+                                  00003df2       126   func ,l         * 
+FILE=_lsfts
+                                  00003f18  00003f67        50
+  __lsfts
+                                  00003f18        50   func ,g         * 
+FILE=_pow5
+                                  00003f68  00003f83        1c
+  __pow5
+                                  00003f68        1c   func ,g         * 
+FILE=_rsfts
+                                  00003f84  00003fd5        52
+  __rsfts
+                                  00003f84        52   func ,g         * 
+FILE=_sub
+                                  00003fd8  00004041        6a
+  __sub
+                                  00003fd8        6a   func ,g         * 
+FILE=_umemcmp
+                                  00004044  0000406f        2c
+  __umemcmp
+                                  00004044        2c   func ,g         * 
+FILE=_unpack
+                                  00004070  000040eb        7c
+  __unpack
+                                  00004070        7c   func ,g         * 
+FILE=memcmp
+                                  000040ec  00004117        2c
+  _memcmp
+                                  000040ec        2c   func ,g         * 
+FILE=r_addd_a
+                                  00004118  000043c3       2ac
+  __subd_a
+                                  00004118         0   none ,g         * 
+  $CNCL_34
+                                  00004128         0   none ,l         * 
+  __addd_a
+                                  0000412c         0   none ,g         * 
+  $CNCL_26
+                                  00004132         0   none ,l         * 
+  $CNCL_29
+                                  00004162         0   none ,l         * 
+  $CNCL_37
+                                  00004166         0   none ,l         * 
+  $CNCL_11
+                                  00004172         0   none ,l         * 
+  $CNCL_24
+                                  00004190         0   none ,l         * 
+  $CNCL_27
+                                  000041c8         0   none ,l         * 
+  $CNCL_40
+                                  000041da         0   none ,l         * 
+  $CNCL_2
+                                  000041f0         0   none ,l         * 
+  $CNCL_9
+                                  000041f6         0   none ,l         * 
+  $CNCL_31
+                                  00004206         0   none ,l         * 
+  $CNCL_25
+                                  0000423e         0   none ,l         * 
+  $CNCL_7
+                                  00004258         0   none ,l         * 
+  $CNCL_23
+                                  0000425c         0   none ,l         * 
+  $CNCL_20
+                                  0000426e         0   none ,l         * 
+  $CNCL_38
+                                  00004280         0   none ,l         * 
+  $CNCL_19
+                                  00004286         0   none ,l         * 
+  $CNCL_16
+                                  000042a2         0   none ,l         * 
+  $CNCL_1
+                                  000042b8         0   none ,l         * 
+  $CNCL_30
+                                  000042bc         0   none ,l         * 
+  $CNCL_41
+                                  000042ca         0   none ,l         * 
+  $CNCL_3
+                                  000042da         0   none ,l         * 
+  $CNCL_4
+                                  000042ee         0   none ,l         * 
+  $CNCL_5
+                                  00004308         0   none ,l         * 
+  $CNCL_6
+                                  00004318         0   none ,l         * 
+  $CNCL_8
+                                  00004324         0   none ,l         * 
+  $CNCL_21
+                                  00004340         0   none ,l         * 
+  $CNCL_18
+                                  0000434c         0   none ,l         * 
+  $CNCL_33
+                                  00004358         0   none ,l         * 
+  $CNCL_14
+                                  0000436a         0   none ,l         * 
+  $CNCL_28
+                                  00004382         0   none ,l         * 
+  $CNCL_36
+                                  0000438a         0   none ,l         * 
+  $CNCL_42
+                                  0000438e         0   none ,l         * 
+  $CNCL_22
+                                  000043a0         0   none ,l         * 
+  $CNCL_15
+                                  000043a4         0   none ,l         * 
+  $CNCL_32
+                                  000043a8         0   none ,l         * 
+  $CNCL_12
+                                  000043ac         0   none ,l         * 
+  $CNCL_35
+                                  000043b0         0   none ,l         * 
+  $CNCL_10
+                                  000043b4         0   none ,l         * 
+  $CNCL_39
+                                  000043b8         0   none ,l         * 
+  $CNCL_13
+                                  000043bc         0   none ,l         * 
+  $CNCL_17
+                                  000043c0         0   none ,l         * 
+FILE=r_dtoi_a
+                                  000043c4  0000444f        8c
+  __dtoi_a
+                                  000043c4         0   none ,g         * 
+  __dtou_a
+                                  000043c4         0   none ,g         * 
+  $CNCL_4
+                                  00004404         0   none ,l         * 
+  $CNCL_3
+                                  0000440e         0   none ,l         * 
+  $CNCL_1
+                                  00004416         0   none ,l         * 
+  $CNCL_10
+                                  00004420         0   none ,l         * 
+  $CNCL_6
+                                  00004422         0   none ,l         * 
+  $CNCL_11
+                                  00004428         0   none ,l         * 
+  $CNCL_7
+                                  0000442e         0   none ,l         * 
+  $CNCL_2
+                                  0000442e         0   none ,l         * 
+  $CNCL_13
+                                  0000443a         0   none ,l         * 
+  $CNCL_9
+                                  00004440         0   none ,l         * 
+  $CNCL_12
+                                  00004444         0   none ,l         * 
+  $CNCL_8
+                                  00004448         0   none ,l         * 
+  $CNCL_5
+                                  0000444c         0   none ,l         * 
+FILE=r_eqd_a
+                                  00004450  000044e3        94
+  __eqd_a
+                                  00004450         0   none ,g         * 
+  $CNCL_10
+                                  00004482         0   none ,l         * 
+  $CNCL_2
+                                  00004486         0   none ,l         * 
+  $CNCL_4
+                                  0000448a         0   none ,l         * 
+  $CNCL_6
+                                  00004496         0   none ,l         * 
+  $CNCL_7
+                                  00004498         0   none ,l         * 
+  $CNCL_1
+                                  000044aa         0   none ,l         * 
+  $CNCL_3
+                                  000044b6         0   none ,l         * 
+  $CNCL_5
+                                  000044c2         0   none ,l         * 
+  $CNCL_8
+                                  000044dc         0   none ,l         * 
+  $CNCL_9
+                                  000044e0         0   none ,l         * 
+FILE=r_itod_a
+                                  000044e4  00004533        50
+  __itod_a
+                                  000044e4         0   none ,g         * 
+  $CNCL_1
+                                  000044f8         0   none ,l         * 
+  $CNCL_2
+                                  000044fa         0   none ,l         * 
+  $CNCL_3
+                                  0000451c         0   none ,l         * 
+  $CNCL_5
+                                  0000452a         0   none ,l         * 
+  $CNCL_4
+                                  00004530         0   none ,l         * 
+FILE=r_ltd_a
+                                  00004534  000045db        a8
+  __ltd_a
+                                  00004534         0   none ,g         * 
+  $CNCL_11
+                                  00004566         0   none ,l         * 
+  $CNCL_2
+                                  0000456a         0   none ,l         * 
+  $CNCL_4
+                                  0000456e         0   none ,l         * 
+  $CNCL_9
+                                  00004580         0   none ,l         * 
+  $CNCL_12
+                                  00004588         0   none ,l         * 
+  $CNCL_7
+                                  0000458c         0   none ,l         * 
+  $CNCL_1
+                                  0000459e         0   none ,l         * 
+  $CNCL_3
+                                  000045aa         0   none ,l         * 
+  $CNCL_5
+                                  000045b6         0   none ,l         * 
+  $CNCL_6
+                                  000045ce         0   none ,l         * 
+  $CNCL_8
+                                  000045d4         0   none ,l         * 
+  $CNCL_10
+                                  000045d8         0   none ,l         * 
+FILE=r_muld_a
+                                  000045dc  0000483f       264
+  __muld_a
+                                  000045dc         0   none ,g         * 
+  $CNCL_22
+                                  00004616         0   none ,l         * 
+  $CNCL_29
+                                  0000461a         0   none ,l         * 
+  $CNCL_27
+                                  0000461e         0   none ,l         * 
+  $CNCL_31
+                                  00004622         0   none ,l         * 
+  $CNCL_7
+                                  0000462e         0   none ,l         * 
+  $CNCL_20
+                                  0000464c         0   none ,l         * 
+  $CNCL_12
+                                  000046ca         0   none ,l         * 
+  $CNCL_23
+                                  000046d4         0   none ,l         * 
+  $CNCL_21
+                                  00004704         0   none ,l         * 
+  $CNCL_19
+                                  00004726         0   none ,l         * 
+  $CNCL_30
+                                  00004730         0   none ,l         * 
+  $CNCL_25
+                                  00004738         0   none ,l         * 
+  $CNCL_16
+                                  0000473c         0   none ,l         * 
+  $CNCL_32
+                                  0000474e         0   none ,l         * 
+  $CNCL_33
+                                  00004754         0   none ,l         * 
+  $CNCL_14
+                                  0000475a         0   none ,l         * 
+  $CNCL_36
+                                  00004762         0   none ,l         * 
+  $CNCL_10
+                                  00004768         0   none ,l         * 
+  $CNCL_1
+                                  0000477e         0   none ,l         * 
+  $CNCL_2
+                                  0000478e         0   none ,l         * 
+  $CNCL_3
+                                  000047a2         0   none ,l         * 
+  $CNCL_4
+                                  000047bc         0   none ,l         * 
+  $CNCL_5
+                                  000047cc         0   none ,l         * 
+  $CNCL_6
+                                  000047d8         0   none ,l         * 
+  $CNCL_9
+                                  000047de         0   none ,l         * 
+  $CNCL_13
+                                  000047fa         0   none ,l         * 
+  $CNCL_18
+                                  00004818         0   none ,l         * 
+  $CNCL_11
+                                  0000481c         0   none ,l         * 
+  $CNCL_24
+                                  00004820         0   none ,l         * 
+  $CNCL_17
+                                  00004824         0   none ,l         * 
+  $CNCL_15
+                                  00004828         0   none ,l         * 
+  $CNCL_8
+                                  0000482c         0   none ,l         * 
+  $CNCL_34
+                                  00004830         0   none ,l         * 
+  $CNCL_35
+                                  00004834         0   none ,l         * 
+  $CNCL_26
+                                  00004838         0   none ,l         * 
+  $CNCL_28
+                                  0000483c         0   none ,l         * 
+FILE=_div64
+                                  00004840  000049bf       180
+  __div64
+                                  00004840       180   func ,g         * 
+FILE=_duchek
+                                  000049c0  000049eb        2c
+  __duchek
+                                  000049c0        2c   func ,g         * 
+FILE=_lsft
+                                  000049ec  00004a19        2e
+  __lsft
+                                  000049ec        2e   func ,g         * 
+FILE=_mult64
+                                  00004a1c  00004a7b        60
+  __mult64
+                                  00004a1c        60   func ,g         * 
+FILE=_power
+                                  00004a7c  00004bd7       15c
+  __power
+                                  00004a7c       15c   func ,g         * 
+FILE=_rnd
+                                  00004bd8  00004c99        c2
+  __rnd
+                                  00004bd8        c2   func ,g         * 
+FILE=_setsbit
+                                  00004c9c  00004d15        7a
+  __setsbit
+                                  00004c9c        7a   func ,g         * 
+FILE=malloc
+                                  00004d18  00004ddb        c4
+  __malloc
+                                  00004d18        84   func ,g         * 
+  _malloc
+                                  00004d18         0   func ,g         * 
+  __morecor
+                                  00004d9c        40   func ,l         * 
+FILE=_add
+                                  00004ddc  00004e1f        44
+  __add
+                                  00004ddc        44   func ,g         * 
+FILE=_mult
+                                  00004e20  00004f23       104
+  __mult
+                                  00004e20       104   func ,g         * 
+FILE=_pow10
+                                  00004f24  00004f9f        7c
+  __pow10
+                                  00004f24        7c   func ,g         * 
+FILE=_rsft
+                                  00004fa0  00004fc9        2a
+  __rsft
+                                  00004fa0        2a   func ,g         * 
+FILE=memset
+                                  00004fcc  00005027        5c
+  _memset
+                                  00004fcc        5c   func ,g         * 
+
+SECTION=C
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\lowsrc.obj
+                                  00005028  00005049        22
+  __nfiles
+                                  00005028         4   data ,g         * 
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\sh7286_hew_sim.obj
+                                  0000504c  00005055         a
+FILE=_flopen
+                                  00005058  0000506e        17
+FILE=_ctype
+                                  00005070  0000516f       100
+  __ctype
+                                  00005070       100   data ,g         * 
+FILE=_its
+                                  00005170  000051f7        88
+  _table$8
+                                  00005170        88   data ,l         * 
+FILE=_pow5
+                                  000051f8  000052d7        e0
+  _w$4
+                                  000051f8        e0   data ,l         * 
+FILE=_power
+                                  000052d8  00005377        a0
+  _conmnts$14
+                                  000052d8        80   data ,l         * 
+  _conexp$15
+                                  00005358        20   data ,l         * 
+FILE=_sbrk_si
+                                  00005378  0000537b         4
+  __sbrk_size
+                                  00005378         4   data ,g         * 
+
+SECTION=C$BSEC
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\dbsct.obj
+                                  0000537c  00005383         8
+  _BTBL
+                                  0000537c         8   data ,l         * 
+
+SECTION=C$DSEC
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\dbsct.obj
+                                  00005384  0000538f         c
+  _DTBL
+                                  00005384         c   data ,l         * 
+
+SECTION=D
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\sbrk.obj
+                                  00005390  00005393         4
+FILE=_freeptr
+                                  00005394  00005397         4
+
+SECTION=B
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\lowlvl.obj
+                                  fff80000  fff80007         8
+  OUT_BUF
+                                  fff80000         0   none ,l         * 
+  IN_BUF
+                                  fff80004         0   none ,l         * 
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\lowsrc.obj
+                                  fff80008  fff801bf       1b8
+  __iob
+                                  fff80008       190   data ,g         * 
+  _sml_buf
+                                  fff80198        14   data ,g         * 
+  _flmod
+                                  fff801ac        14   data ,g         * 
+FILE=_errno
+                                  fff801c0  fff801c3         4
+  __errno
+                                  fff801c0         4   data ,g         * 
+
+SECTION=R
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\sbrk.obj
+                                  fff801c4  fff801c7         4
+  _brk
+                                  fff801c4         4   data ,l         * 
+FILE=_freeptr
+                                  fff801c8  fff801cb         4
+  __freeptr
+                                  fff801c8         4   data ,g         * 
+
+SECTION=BHeap
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\sbrk.obj
+                                  fff87800  fff87bff       400
+  _heap_area
+                                  fff87800       400   data ,l         * 
+
+SECTION=S
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\resetprg.obj
+                                  fff87c00  fff87fff       400
+
+Absolute value symbols
+FILE=C:\WorkSpace\renesas\sh7286_hew_sim\sh7286_hew_sim\SimDebug_SH2A-FPU_Func\lowlvl.obj
+  SIM_IO
+                                  00000000         0   none ,l         * 
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO
+
+*** Variable Accessible with Abs8 ***
+
+SYMBOL                                SIZE    COUNTS  OPTIMIZE
+
+*** Variable Accessible with Abs16 ***
+
+SYMBOL                                SIZE    COUNTS  OPTIMIZE
+
+*** Function Call ***
+
+SYMBOL                              COUNTS  OPTIMIZE
