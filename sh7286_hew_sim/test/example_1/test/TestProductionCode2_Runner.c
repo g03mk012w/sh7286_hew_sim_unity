@@ -22,7 +22,7 @@
 #include "unity.h"
 #include <setjmp.h>
 #include <stdio.h>
-#include "ProductionCode2.h"
+#include "../src/ProductionCode2.h"
 
 /*=======External Functions This Runner Calls=====*/
 extern void setUp(void);
@@ -42,7 +42,8 @@ void resetTest(void)
 
 
 /*=======MAIN=====*/
-int main(void)
+//int main(void)
+int TestProduction_main(void)
 {
   UnityBegin("test/TestProductionCode2.c");
   RUN_TEST(test_IgnoredTest, 18);

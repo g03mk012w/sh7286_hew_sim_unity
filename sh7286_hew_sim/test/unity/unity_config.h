@@ -54,7 +54,7 @@
  * want Unity to check this file, define this to make it skip the inclusion.
  * Unity looks at UINT_MAX & ULONG_MAX, which were available since C89.
  */
-/* #define UNITY_EXCLUDE_LIMITS_H */
+#define UNITY_EXCLUDE_LIMITS_H
 
 /* The second thing that Unity does to guess your types is check `stdint.h`.
  * This file defines `UINTPTR_MAX`, since C99, that Unity can make use of to
@@ -63,7 +63,7 @@
  * you're going to want to define this. That way, Unity will know to skip the
  * inclusion of this file and you won't be left with a compiler error.
  */
-/* #define UNITY_EXCLUDE_STDINT_H */
+#define UNITY_EXCLUDE_STDINT_H
 
 /* ********************** MANUAL INTEGER TYPE DEFINITION ***********************
  * If you've disabled all of the automatic options above, you're going to have

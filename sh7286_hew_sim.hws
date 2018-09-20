@@ -3,12 +3,12 @@
 [DATABASE_VERSION]
 "11.0" 
 [WORKSPACE_DETAILS]
-"sh7286_hew_sim" "E:\Google\Drive\g03mk012w\workspace\renesas\sh7286_hew_sim" "E:\Google\Drive\g03mk012w\workspace\renesas\sh7286_hew_sim\sh7286_hew_sim.hws" "SuperH RISC engine" "Renesas SuperH Standard" 
+"sh7286_hew_sim" "C:\WorkSpace\renesas\sh7286_hew_sim_unity" "C:\WorkSpace\renesas\sh7286_hew_sim_unity\sh7286_hew_sim.hws" "SuperH RISC engine" "Renesas SuperH Standard" 
 [SHARED_WORKSPACE_CONTROL_STATUS]
 "" "" "" 
 "" "" "" 
 [PROJECTS]
-"sh7286_hew_sim" "E:\Google\Drive\g03mk012w\workspace\renesas\sh7286_hew_sim\sh7286_hew_sim" "E:\Google\Drive\g03mk012w\workspace\renesas\sh7286_hew_sim\sh7286_hew_sim\sh7286_hew_sim.hwp" 0 
+"sh7286_hew_sim" "C:\WorkSpace\renesas\sh7286_hew_sim_unity\sh7286_hew_sim" "C:\WorkSpace\renesas\sh7286_hew_sim_unity\sh7286_hew_sim\sh7286_hew_sim.hwp" 0 
 [INFORMATION]
 "ワークスペース情報がありません" 
 [SCRAP]

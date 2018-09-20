@@ -26,10 +26,14 @@ void abort(void);
 
 #include <stdio.h>
 
+extern int TestProduction_main(void);  //test
+
 void main(void)
 {
 	volatile int i;
-	
+
+	TestProduction_main();
+
 	while(1) {
 		printf("sim test\n");
 		i = 0; 

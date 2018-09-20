@@ -22,7 +22,7 @@
 #include "unity.h"
 #include <setjmp.h>
 #include <stdio.h>
-#include "ProductionCode.h"
+#include "../src/ProductionCode.h"
 
 /*=======External Functions This Runner Calls=====*/
 extern void setUp(void);
@@ -44,7 +44,8 @@ void resetTest(void)
 
 
 /*=======MAIN=====*/
-int main(void)
+//int main(void)
+int TestProduction_main(void)
 {
   UnityBegin("test/TestProductionCode.c");
   RUN_TEST(test_FindFunction_WhichIsBroken_ShouldReturnZeroIfItemIsNotInList_WhichWorksEvenInOurBrokenCode, 20);

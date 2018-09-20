@@ -1,6 +1,15 @@
+/.vscode/
+*.arf
+*.nav
+*.hdp
 *.sha
 *.shc
 *.shg
+*.obj
+*.pak
 *.lst
-*.nav
-*.hdp
+/sh7286_hew_sim/SimDebug_SH2A-FPU_Func/
+!/sh7286_hew_sim/SimDebug_SH2A-FPU_Func/sh7286_hew_sim.abs
+!/sh7286_hew_sim/SimDebug_SH2A-FPU_Func/sh7286_hew_sim.hlk
+!/sh7286_hew_sim/SimDebug_SH2A-FPU_Func/sh7286_hew_sim.map
+!/sh7286_hew_sim/SimDebug_SH2A-FPU_Func/sh7286_hew_sim.mot
